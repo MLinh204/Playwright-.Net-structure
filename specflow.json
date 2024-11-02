@@ -1,0 +1,31 @@
+{
+  "bindingCulture": {
+    "name": "en-us"
+  },
+  "language": {
+    "feature": "en-us"
+  },
+  "stepAssemblies": [
+    {
+      "assembly": "PlaywrightTests"
+    }
+  ],
+  "livingDoc": {
+    "enabled": true,
+    "filePath": "TestResults/LivingDoc.html",
+    "defaultLanguage": "en-us",
+    "featuresBasePath": "Features",
+    "outputPath": "TestResults"
+  },
+  "generator": {
+    "allowDebugGeneratedFiles": true,
+    "allowRowTests": true
+  },
+  "runtime": {
+    "stopAtFirstError": false,
+    "missingOrPendingStepsOutcome": "Pending"
+  },
+  "module.exports": {
+    "fullyParallel": true
+  }
+}

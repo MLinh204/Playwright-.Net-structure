@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b2e94602-dcb8-4060-9a87-b07d206f5d28" name="hml20@DESKTOP-JMSEL2U 2024-10-27 16:21:08" runUser="DESKTOP-JMSEL2U\hml20" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-10-27T16:21:08.4360650+07:00" queuing="2024-10-27T16:21:08.4360654+07:00" start="2024-10-27T16:21:03.5874976+07:00" finish="2024-10-27T16:21:29.9337077+07:00" />
+  <TestSettings name="default" id="103b6623-a118-44d5-b017-bc2f18cff572">
+    <Deployment runDeploymentRoot="hml20_DESKTOP-JMSEL2U_2024-10-27_16_21_08" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="9882db75-8e14-4314-a0cf-8b01c43bd0ee" testId="995dda3f-6bdd-5a50-ba48-3fc0cc7f9796" testName="SuccessfulLoginWithValidCredentials" computerName="DESKTOP-JMSEL2U" duration="00:00:04.2353990" startTime="2024-10-27T16:21:04.1532565+07:00" endTime="2024-10-27T16:21:08.3885847+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9882db75-8e14-4314-a0cf-8b01c43bd0ee">
+      <Output>
+        <StdOut>BeforeScenario executed for Login: Successful login with valid credentials&#xD;
+Given I am on the login page&#xD;
+-&gt; done: LoginStepDefinitions.IAmOnTheLoginPage() (2.3s)&#xD;
+When I enter valid values&#xD;
+  --- table step argument ---&#xD;
+  | Field    | Value              |&#xD;
+  | email    | {EXISTED_EMAIL}    |&#xD;
+  | Password | {EXISTED_PASSWORD} |&#xD;
+-&gt; done: LoginStepDefinitions.WhenIEnterValidValues(&lt;table&gt;) (0.0s)&#xD;
+And I click the login button&#xD;
+-&gt; done: LoginStepDefinitions.clickLoginButton() (0.7s)&#xD;
+Then I should be logged in&#xD;
+-&gt; done: LoginStepDefinitions.IShouldBeLoggedIn() (0.2s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a369a0c8-2f4d-4de9-ba6f-84173b2a2f8a" testId="ef75b3da-894b-4c3c-d22c-64c73a242245" testName="SuccessfulUserRegistration" computerName="DESKTOP-JMSEL2U" duration="00:00:13.3421580" startTime="2024-10-27T16:21:16.5224053+07:00" endTime="2024-10-27T16:21:29.8645624+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a369a0c8-2f4d-4de9-ba6f-84173b2a2f8a">
+      <Output>
+        <StdOut>BeforeScenario executed for Signup: Successful user registration&#xD;
+Given I am on the signup page&#xD;
+-&gt; done: SignupStepDefinitions.GivenIAmOnTheSignupPage() (2.2s)&#xD;
+When I enter new user signup details&#xD;
+  --- table step argument ---&#xD;
+  | Field | Value        |&#xD;
+  | name  | {TEST_USER}  |&#xD;
+  | email | {TEST_EMAIL} |&#xD;
+-&gt; done: SignupStepDefinitions.WhenIEnterNewUserSignupDetails(&lt;table&gt;) (0.1s)&#xD;
+And I click the signup button&#xD;
+-&gt; done: SignupStepDefinitions.WhenIClickTheSignupButton() (2.8s)&#xD;
+And I fill in the account details&#xD;
+  --- table step argument ---&#xD;
+  | Field        | Value               |&#xD;
+  | Title        | Mr                  |&#xD;
+  | Password     | {TEST_PASSWORD}     |&#xD;
+  | Day          | 1                   |&#xD;
+  | Month        | January             |&#xD;
+  | Year         | 2020                |&#xD;
+  | First Name   | {TEST_FIRSTNAME}    |&#xD;
+  | Last Name    | {TEST_LASTNAME}     |&#xD;
+  | Company      | {TEST_COMPANY}      |&#xD;
+  | Address1     | {TEST_ADDRESS}      |&#xD;
+  | Address2     | {TEST_ADDRESS2}     |&#xD;
+  | Country      | Canada              |&#xD;
+  | State        | {TEST_STATE}        |&#xD;
+  | City         | {TEST_CITY}         |&#xD;
+  | Zipcode      | {TEST_ZIPCODE}      |&#xD;
+  | Phone Number | {TEST_PHONE_NUMBER} |&#xD;
+-&gt; done: SignupStepDefinitions.WhenIFillInTheAccountDetails(&lt;table&gt;) (0.4s)&#xD;
+And I click create account button&#xD;
+-&gt; done: SignupStepDefinitions.WhenIClickCreateAccountButton() (2.6s)&#xD;
+Then I should see the account created message&#xD;
+-&gt; done: SignupStepDefinitions.ThenIShouldSeeTheAccountCreatedMessage() (2.4s)&#xD;
+And I should be logged in successfully&#xD;
+-&gt; done: SignupStepDefinitions.ThenIShouldBeLoggedInSuccessfully() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0031b328-f598-445f-ba6f-2081b140694e" testId="87a1d549-ccb1-3987-50d3-7df42b9b74ff" testName="SignupPageIsAccessible" computerName="DESKTOP-JMSEL2U" duration="00:00:02.8354730" startTime="2024-10-27T16:21:08.3939282+07:00" endTime="2024-10-27T16:21:11.2294015+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0031b328-f598-445f-ba6f-2081b140694e">
+      <Output>
+        <StdOut>BeforeScenario executed for Signup: Signup page is accessible&#xD;
+Given I am on the signup page&#xD;
+-&gt; done: SignupStepDefinitions.GivenIAmOnTheSignupPage() (2.2s)&#xD;
+Then the signup page should be visible&#xD;
+-&gt; done: SignupStepDefinitions.ThenTheSignupPageShouldBeVisible() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bf38f21d-16da-4a47-bba5-30c2f6062107" testId="ec900eac-50ab-589b-0b7f-831f73457ab0" testName="SignupWithExistingEmail" computerName="DESKTOP-JMSEL2U" duration="00:00:05.2929240" startTime="2024-10-27T16:21:11.2294335+07:00" endTime="2024-10-27T16:21:16.5223568+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf38f21d-16da-4a47-bba5-30c2f6062107">
+      <Output>
+        <StdOut>BeforeScenario executed for Signup: Signup with existing email&#xD;
+Given I am on the signup page&#xD;
+-&gt; done: SignupStepDefinitions.GivenIAmOnTheSignupPage() (2.3s)&#xD;
+When I enter existing user signup details&#xD;
+  --- table step argument ---&#xD;
+  | Field | Value              |&#xD;
+  | name  | {EXISTED_USERNAME} |&#xD;
+  | email | {EXISTED_EMAIL}    |&#xD;
+-&gt; done: SignupStepDefinitions.WhenIEnterExistingUserSignupDetails(&lt;table&gt;) (0.0s)&#xD;
+And I click the signup button&#xD;
+-&gt; done: SignupStepDefinitions.WhenIClickTheSignupButton() (2.3s)&#xD;
+Then I should see email already exists message&#xD;
+-&gt; done: SignupStepDefinitions.ThenIShouldSeeEmailAlreadyExistsMessage() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SignupPageIsAccessible" storage="d:\playwright .net practice\playwrighttests\bin\debug\net8.0\playwrighttests.dll" id="87a1d549-ccb1-3987-50d3-7df42b9b74ff">
+      <Execution id="0031b328-f598-445f-ba6f-2081b140694e" />
+      <TestMethod codeBase="D:\Playwright .net practice\PlaywrightTests\bin\Debug\net8.0\PlaywrightTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightTests.Features.UserSignupFeature" name="SignupPageIsAccessible" />
+    </UnitTest>
+    <UnitTest name="SignupWithExistingEmail" storage="d:\playwright .net practice\playwrighttests\bin\debug\net8.0\playwrighttests.dll" id="ec900eac-50ab-589b-0b7f-831f73457ab0">
+      <Execution id="bf38f21d-16da-4a47-bba5-30c2f6062107" />
+      <TestMethod codeBase="D:\Playwright .net practice\PlaywrightTests\bin\Debug\net8.0\PlaywrightTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightTests.Features.UserSignupFeature" name="SignupWithExistingEmail" />
+    </UnitTest>
+    <UnitTest name="SuccessfulLoginWithValidCredentials" storage="d:\playwright .net practice\playwrighttests\bin\debug\net8.0\playwrighttests.dll" id="995dda3f-6bdd-5a50-ba48-3fc0cc7f9796">
+      <Execution id="9882db75-8e14-4314-a0cf-8b01c43bd0ee" />
+      <TestMethod codeBase="D:\Playwright .net practice\PlaywrightTests\bin\Debug\net8.0\PlaywrightTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightTests.Features.UserLoginFeature" name="SuccessfulLoginWithValidCredentials" />
+    </UnitTest>
+    <UnitTest name="SuccessfulUserRegistration" storage="d:\playwright .net practice\playwrighttests\bin\debug\net8.0\playwrighttests.dll" id="ef75b3da-894b-4c3c-d22c-64c73a242245">
+      <Execution id="a369a0c8-2f4d-4de9-ba6f-84173b2a2f8a" />
+      <TestMethod codeBase="D:\Playwright .net practice\PlaywrightTests\bin\Debug\net8.0\PlaywrightTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightTests.Features.UserSignupFeature" name="SuccessfulUserRegistration" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="995dda3f-6bdd-5a50-ba48-3fc0cc7f9796" executionId="9882db75-8e14-4314-a0cf-8b01c43bd0ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ef75b3da-894b-4c3c-d22c-64c73a242245" executionId="a369a0c8-2f4d-4de9-ba6f-84173b2a2f8a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87a1d549-ccb1-3987-50d3-7df42b9b74ff" executionId="0031b328-f598-445f-ba6f-2081b140694e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec900eac-50ab-589b-0b7f-831f73457ab0" executionId="bf38f21d-16da-4a47-bba5-30c2f6062107" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.5.0.0: Test execution started&#xD;
+Running all tests in D:\Playwright .net practice\PlaywrightTests\bin\Debug\net8.0\PlaywrightTests.dll&#xD;
+   NUnit3TestExecutor discovered 4 of 4 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 4.5.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-JMSEL2U" outcome="Warning" timestamp="2024-10-27T16:21:08.4011913+07:00">
+        <Text>BeforeScenario executed for Login: Successful login with valid credentials&#xD;
+Given I am on the login page&#xD;
+-&gt; done: LoginStepDefinitions.IAmOnTheLoginPage() (2.3s)&#xD;
+When I enter valid values&#xD;
+  --- table step argument ---&#xD;
+  | Field    | Value              |&#xD;
+  | email    | {EXISTED_EMAIL}    |&#xD;
+  | Password | {EXISTED_PASSWORD} |&#xD;
+-&gt; done: LoginStepDefinitions.WhenIEnterValidValues(&lt;table&gt;) (0.0s)&#xD;
+And I click the login button&#xD;
+-&gt; done: LoginStepDefinitions.clickLoginButton() (0.7s)&#xD;
+Then I should be logged in&#xD;
+-&gt; done: LoginStepDefinitions.IShouldBeLoggedIn() (0.2s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-JMSEL2U" outcome="Warning" timestamp="2024-10-27T16:21:11.2302264+07:00">
+        <Text>BeforeScenario executed for Signup: Signup page is accessible&#xD;
+Given I am on the signup page&#xD;
+-&gt; done: SignupStepDefinitions.GivenIAmOnTheSignupPage() (2.2s)&#xD;
+Then the signup page should be visible&#xD;
+-&gt; done: SignupStepDefinitions.ThenTheSignupPageShouldBeVisible() (0.0s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-JMSEL2U" outcome="Warning" timestamp="2024-10-27T16:21:16.5230894+07:00">
+        <Text>BeforeScenario executed for Signup: Signup with existing email&#xD;
+Given I am on the signup page&#xD;
+-&gt; done: SignupStepDefinitions.GivenIAmOnTheSignupPage() (2.3s)&#xD;
+When I enter existing user signup details&#xD;
+  --- table step argument ---&#xD;
+  | Field | Value              |&#xD;
+  | name  | {EXISTED_USERNAME} |&#xD;
+  | email | {EXISTED_EMAIL}    |&#xD;
+-&gt; done: SignupStepDefinitions.WhenIEnterExistingUserSignupDetails(&lt;table&gt;) (0.0s)&#xD;
+And I click the signup button&#xD;
+-&gt; done: SignupStepDefinitions.WhenIClickTheSignupButton() (2.3s)&#xD;
+Then I should see email already exists message&#xD;
+-&gt; done: SignupStepDefinitions.ThenIShouldSeeEmailAlreadyExistsMessage() (0.0s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-JMSEL2U" outcome="Warning" timestamp="2024-10-27T16:21:29.8698824+07:00">
+        <Text>BeforeScenario executed for Signup: Successful user registration&#xD;
+Given I am on the signup page&#xD;
+-&gt; done: SignupStepDefinitions.GivenIAmOnTheSignupPage() (2.2s)&#xD;
+When I enter new user signup details&#xD;
+  --- table step argument ---&#xD;
+  | Field | Value        |&#xD;
+  | name  | {TEST_USER}  |&#xD;
+  | email | {TEST_EMAIL} |&#xD;
+-&gt; done: SignupStepDefinitions.WhenIEnterNewUserSignupDetails(&lt;table&gt;) (0.1s)&#xD;
+And I click the signup button&#xD;
+-&gt; done: SignupStepDefinitions.WhenIClickTheSignupButton() (2.8s)&#xD;
+And I fill in the account details&#xD;
+  --- table step argument ---&#xD;
+  | Field        | Value               |&#xD;
+  | Title        | Mr                  |&#xD;
+  | Password     | {TEST_PASSWORD}     |&#xD;
+  | Day          | 1                   |&#xD;
+  | Month        | January             |&#xD;
+  | Year         | 2020                |&#xD;
+  | First Name   | {TEST_FIRSTNAME}    |&#xD;
+  | Last Name    | {TEST_LASTNAME}     |&#xD;
+  | Company      | {TEST_COMPANY}      |&#xD;
+  | Address1     | {TEST_ADDRESS}      |&#xD;
+  | Address2     | {TEST_ADDRESS2}     |&#xD;
+  | Country      | Canada              |&#xD;
+  | State        | {TEST_STATE}        |&#xD;
+  | City         | {TEST_CITY}         |&#xD;
+  | Zipcode      | {TEST_ZIPCODE}      |&#xD;
+  | Phone Number | {TEST_PHONE_NUMBER} |&#xD;
+-&gt; done: SignupStepDefinitions.WhenIFillInTheAccountDetails(&lt;table&gt;) (0.4s)&#xD;
+And I click create account button&#xD;
+-&gt; done: SignupStepDefinitions.WhenIClickCreateAccountButton() (2.6s)&#xD;
+Then I should see the account created message&#xD;
+-&gt; done: SignupStepDefinitions.ThenIShouldSeeTheAccountCreatedMessage() (2.4s)&#xD;
+And I should be logged in successfully&#xD;
+-&gt; done: SignupStepDefinitions.ThenIShouldBeLoggedInSuccessfully() (0.0s)&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
