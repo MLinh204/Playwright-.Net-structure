@@ -12,23 +12,28 @@ namespace PlaywrightTests.StepDefinitions
     [Binding]
     public class LoginStepDefinitions : BaseSteps
     {
+        public LoginStepDefinitions(TestContext context, ScenarioContext scenarioContext) 
+            : base(context, scenarioContext)
+        {
+        }
+
         [BeforeScenario("Login")]
         public async Task BeforeLoginScenario()
         {
-            Console.WriteLine($"BeforeScenario executed for Login: {ScenarioContext.Current.ScenarioInfo.Title}");
-            await InitializeBrowser();
+            Console.WriteLine($"BeforeScenario executed for Login: {ScenarioContext.ScenarioInfo.Title}");
+            await Context.Initialize();
         }
 
         [AfterScenario("Login")]
         public async Task AfterLoginScenario()
         {
-            await CleanupBrowser();
+            await Context.Cleanup();
         }
 
         [Given(@"I am on the login page")]
         public async Task IAmOnTheLoginPage()
         {
-            await function.GoTo(ConfigURL.SIGNUP_LOGIN_URL);
+            await Function.GoTo(ConfigURL.SIGNUP_LOGIN_URL);
         }
 
         [When(@"I enter valid values")]
@@ -42,19 +47,19 @@ namespace PlaywrightTests.StepDefinitions
                     .Replace("{EXISTED_EMAIL}", ConfigElement.EXISTED_EMAIL)
                     .Replace("{EXISTED_PASSWORD}", ConfigElement.EXISTED_USER_PASSWORD);
 
-                await loginPage.findLoginInputByName(entry.Key.ToLower()).FillAsync(value);
+                await LoginPage.findLoginInputByName(entry.Key.ToLower()).FillAsync(value);
             }
         }
         [When(@"I click the login button")]
         public async Task clickLoginButton()
         {
-            await loginPage.loginBtn.ClickAsync();
+            await LoginPage.loginBtn.ClickAsync();
         }
 
         [Then(@"I should be logged in")]
         public async Task IShouldBeLoggedIn()
         {
-            Assert.That(await homepage.loggedInText.InnerTextAsync(),
+            Assert.That(await Homepage.loggedInText.InnerTextAsync(),
                 Is.EqualTo(ConfigElement.LOGGEDIN_TEXT_EXISTED_USER_MESSAGE));
         }
         [When(@"I enter wrong email and correct Password")]
@@ -66,15 +71,15 @@ namespace PlaywrightTests.StepDefinitions
                 string value = entry.Value
                     .Replace("{EXISTED_PASSWORD}", ConfigElement.EXISTED_USER_PASSWORD);
 
-                await loginPage.findLoginInputByName(entry.Key.ToLower()).FillAsync(value);
+                await LoginPage.findLoginInputByName(entry.Key.ToLower()).FillAsync(value);
             }
 
         }
         [Then(@"The error message should be displayed")]
         public async Task IsErrorMessageDisplayed()
         {
-            Assert.IsTrue(await loginPage.errorMessage.IsVisibleAsync());
-            Assert.That(await loginPage.errorMessage.InnerTextAsync(), Is.EqualTo(ConfigElement.WRONG_AUTHENTICATION_MESSAGE));
+            Assert.IsTrue(await LoginPage.errorMessage.IsVisibleAsync());
+            Assert.That(await LoginPage.errorMessage.InnerTextAsync(), Is.EqualTo(ConfigElement.WRONG_AUTHENTICATION_MESSAGE));
         }
     }
 }

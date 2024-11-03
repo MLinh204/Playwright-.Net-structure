@@ -453,3 +453,4 @@ D:\Playwright .net practice\PlaywrightTests\obj\Debug\net8.0\refint\PlaywrightTe
 D:\Playwright .net practice\PlaywrightTests\obj\Debug\net8.0\PlaywrightTests.pdb
 D:\Playwright .net practice\PlaywrightTests\obj\Debug\net8.0\PlaywrightTests.genruntimeconfig.cache
 D:\Playwright .net practice\PlaywrightTests\obj\Debug\net8.0\ref\PlaywrightTests.dll
+D:\Playwright .net practice\PlaywrightTests\obj\Debug\net8.0\PlaywrightTests.sourcelink.json
