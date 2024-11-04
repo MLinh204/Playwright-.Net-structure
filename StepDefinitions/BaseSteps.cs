@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
-using PlaywrightTests.function;
+using PlaywrightTests.Helpers;
 using PlaywrightTests.page;
 using TechTalk.SpecFlow;
 
 
 namespace PlaywrightTests.StepDefinitions
 {
-     public abstract class BaseSteps
+    public abstract class BaseSteps
     {
         protected readonly TestContext Context;
         protected readonly ScenarioContext ScenarioContext;

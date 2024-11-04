@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
 using PlaywrightTests.config;
-using PlaywrightTests.function;
+using PlaywrightTests.Helpers;
 
 
 namespace PlaywrightTests.page
@@ -56,7 +56,8 @@ namespace PlaywrightTests.page
         {
             return page.Locator($"//p[@class='required form-group']//input[@name='{name}']");
         }
-        public ILocator selectOptionalTextFieldByName(string name){
+        public ILocator selectOptionalTextFieldByName(string name)
+        {
             return page.Locator($"//p[@class='form-group']//input[@name='{name}']");
         }
         public async Task fillInRequiredTextField(string name, string label)

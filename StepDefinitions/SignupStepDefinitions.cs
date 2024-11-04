@@ -2,7 +2,7 @@ using TechTalk.SpecFlow;
 using Microsoft.Playwright;
 using PlaywrightTests.page;
 using PlaywrightTests.config;
-using PlaywrightTests.function;
+using PlaywrightTests.Helpers;
 using NUnit.Framework;
 
 namespace PlaywrightTests.StepDefinitions
@@ -10,7 +10,7 @@ namespace PlaywrightTests.StepDefinitions
     [Binding]
     public class SignupStepDefinitions : BaseSteps
     {
-        public SignupStepDefinitions(TestContext context, ScenarioContext scenarioContext) 
+        public SignupStepDefinitions(TestContext context, ScenarioContext scenarioContext)
             : base(context, scenarioContext)
         {
         }

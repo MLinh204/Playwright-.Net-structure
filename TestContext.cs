@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
-using PlaywrightTests.function;
+using PlaywrightTests.Helpers;
 using PlaywrightTests.page;
 
 namespace PlaywrightTests
 {
-     public class TestContext
+    public class TestContext
     {
         public IBrowser Browser { get; set; }
         public IPage Page { get; set; }
@@ -28,11 +28,15 @@ namespace PlaywrightTests
 
             var contextOptions = new BrowserNewContextOptions
             {
-                ViewportSize = new ViewportSize { Width = 1920, Height = 1080 }
+                ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
             };
 
             var context = await Browser.NewContextAsync(contextOptions);
             Page = await context.NewPageAsync();
+
+            Page.SetDefaultTimeout(10000);
+
+            Page.SetDefaultNavigationTimeout(10000);
 
             Factory = new PageFactory(Page);
             Function = new MainFunction(Page);

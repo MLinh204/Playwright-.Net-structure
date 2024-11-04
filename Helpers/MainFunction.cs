@@ -4,34 +4,40 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
 
-namespace PlaywrightTests.function
+namespace PlaywrightTests.Helpers
 {
     public class MainFunction
     {
         private readonly IPage _page;
-        public MainFunction(IPage page){
+        public MainFunction(IPage page)
+        {
             _page = page;
         }
 
-        public async Task forceClick(ILocator element){
+        public async Task forceClick(ILocator element)
+        {
             await _page.EvaluateAsync(@"(element) =>{
                 element.click();
 
             }", await element.ElementHandleAsync());
         }
-        
-        public async Task scrollIntoView(ILocator element){
+
+        public async Task scrollIntoView(ILocator element)
+        {
             await _page.EvaluateAsync(@"(element) =>{
                 element.scrollIntoView({behavior: 'smooth', block: 'center'})
             }", await element.ElementHandleAsync());
         }
 
-        public async Task hoverOnElement(ILocator element){
+        public async Task hoverOnElement(ILocator element)
+        {
             await element.HoverAsync();
         }
 
-        public async Task waitForCondition(string script, int timeout = 10000){
-            await _page.WaitForFunctionAsync(script, new PageWaitForFunctionOptions{
+        public async Task waitForCondition(string script, int timeout = 10000)
+        {
+            await _page.WaitForFunctionAsync(script, new PageWaitForFunctionOptions
+            {
                 Timeout = timeout
             });
         }

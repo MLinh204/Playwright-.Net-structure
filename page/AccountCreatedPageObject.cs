@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
-using PlaywrightTests.function;
+using PlaywrightTests.Helpers;
 
 namespace PlaywrightTests.page
 {
@@ -11,7 +11,8 @@ namespace PlaywrightTests.page
     {
         private readonly IPage page;
         private readonly MainFunction function;
-        public AccountCreatedPageObject(IPage _page){
+        public AccountCreatedPageObject(IPage _page)
+        {
             page = _page;
             function = new MainFunction(_page);
         }

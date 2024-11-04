@@ -80,6 +80,6 @@ namespace PlaywrightTests.StepDefinitions
         {
             Assert.IsTrue(await LoginPage.errorMessage.IsVisibleAsync());
             Assert.That(await LoginPage.errorMessage.InnerTextAsync(), Is.EqualTo(ConfigElement.WRONG_AUTHENTICATION_MESSAGE));
-        }
+        }  
     }
 }

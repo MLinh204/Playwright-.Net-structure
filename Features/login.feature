@@ -24,3 +24,4 @@ Feature: User Login
       | Password | {EXISTED_PASSWORD}     |
     And I click the login button
     Then The error message should be displayed
+
